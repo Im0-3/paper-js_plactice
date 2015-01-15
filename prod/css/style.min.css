@@ -1,0 +1,28 @@
+/*color*/
+html {
+  font-color: white;
+}
+
+body {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  opacity: .2;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, black), to(white));
+  background: linear-gradient(to left, black 50%, white 100%);
+  font-style: none;
+  font-weight: red;
+  font-size: 62.5%;
+  -webkit-transition: rotate(45deg);
+  transition: rotate(45deg);
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+div {
+  font-size: 20px;
+  font-size: 2rem;
+}

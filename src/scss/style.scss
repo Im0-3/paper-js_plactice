@@ -1,0 +1,29 @@
+/*color*/
+
+$color: #aaa;
+
+html {
+  font-color: white;
+}
+
+body {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  opacity: .2;
+  background: linear-gradient(to left, black 50%, white 100%);
+
+  font-style: none;
+  font-weight: red;
+  font-size: 62.5%;
+
+  transition: rotate(45deg);
+
+  hyphens: none;
+}
+
+div {
+  font-size: 2rem;
+}
