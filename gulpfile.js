@@ -12,12 +12,13 @@ var paths = {
 };
 
 //watch
-gulp.task('watch', ['sassOptimize', 'coffee', 'copy'],function(){
+gulp.task('watch', ['sassOptimize', 'coffee', 'copy', 'webpack'],function(){
   var scssWatchGlob = path.join(paths.srcDir, 'scss/*.scss');
   var coffeeWatchGlob = path.join(paths.srcDir, 'coffee/*.coffee');
   var htmlWatchGlob = path.join(paths.srcDir, '*.html');
   gulp.watch(scssWatchGlob, ['sassOptimize']);
   gulp.watch(coffeeWatchGlob, ['coffee']);
+  gulp.watch(coffeeWatchGlob, ['webpack']);
   gulp.watch(htmlWatchGlob, ['copy']);
 });
 

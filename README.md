@@ -21,3 +21,7 @@
 
 ### bower
 * bowerで取得した主要ファイルをprod/libへ移動
+
+## CHANGE LOG
+### 2015/02/18
+CoffeeScriptのコンパイルをgulp-webpackに変更

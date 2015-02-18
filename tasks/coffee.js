@@ -4,7 +4,8 @@ var path = require('path');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var cache = require('gulp-cached');
-var coffee  = require('gulp-coffee');
+var webpack  = require('gulp-webpack');
+var rename = require('gulp-rename');
 
 //gulp plugin
 var browserSync = require('browser-sync');
@@ -26,7 +27,17 @@ gulp.task('coffee', function(){
     .pipe(plumber({
       errorHandler: notify.onError(errorMassage)
     }))
-    .pipe(coffee({bare: true}))
+    .pipe(webpack({
+      devtool: '#source-map',
+      output: {
+        filename: "bundle.js"
+      },
+      module: {
+        loaders: [
+          { test: /\.coffee$/, loader: 'coffee-loader' },
+        ],
+      }
+    }))
     .pipe(gulp.dest(dstGlob))
     .pipe(notify(successMassage))
     .pipe(browserSync.reload({stream:true}));
