@@ -1,6 +1,5 @@
 ###
   pathオブジェクトの練習
-  
 ###
 window.onload = ->
   onReady()
